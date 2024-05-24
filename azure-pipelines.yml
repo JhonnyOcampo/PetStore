@@ -8,6 +8,8 @@ trigger:
 
 pool:
   name: Self-hosted agent
+  demands:
+  - agent.name -equals EN2010407
 
 steps:
 - task: Maven@3
