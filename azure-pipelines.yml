@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: Self-hosted agent
+  name: agent2
   demands:
   - agent.name -equals EN2010407
 
