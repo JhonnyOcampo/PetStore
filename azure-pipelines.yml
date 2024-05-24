@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: EN2010407
+  name: Self-hosted agent
 
 steps:
 - task: Maven@3
