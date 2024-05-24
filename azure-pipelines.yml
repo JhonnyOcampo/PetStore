@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  name: Azure Pipelines
+  name: agent2
+  demands:
+    - agent.name -equals EN2010407
 
 steps:
 - task: Maven@4
