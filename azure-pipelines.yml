@@ -3,13 +3,21 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-trigger:
-- main
+trigger: none
 
 pool:
   name: agent-pool-petmarket
   demands:
     - agent.name -equals EN2010407
+
+#Schedule settings
+schedules:
+  - cron: "*/5 * * * *"
+    displayName: Execute petmarket tests every 5 mins
+    branches:
+      include:
+        - main
+    always: true
 
 steps:
 - task: Maven@3
